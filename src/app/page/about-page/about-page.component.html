@@ -1,10 +1,5 @@
-# OpenMap
-
-## Development server
-
-- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-<h1>Добро пожаловать на сайт Leaflet Карта!</h1>
+<div class="container">
+  <h1>Добро пожаловать на сайт Leaflet Карта!</h1>
   <p>
     Мы рады приветствовать вас на нашей платформе, предназначенной для создания
     интерактивных карт с возможностью установки меток на здания и оценки их
@@ -71,3 +66,14 @@
     Не упустите возможность внести свой вклад в создание лучшей и более
     инклюзивной среды!
   </p>
+  <div style="align-items: center; display: flex; justify-content: center">
+    <button
+      nz-button
+      nzType="primary"
+      [routerLink]="['../', 'home']"
+      nzShape="round"
+      [nzSize]="'large'">
+      <span nz-icon nzType="home" nzTheme="twotone">Домой</span>
+    </button>
+  </div>
+</div>

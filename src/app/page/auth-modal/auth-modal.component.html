@@ -1,0 +1,38 @@
+<form
+  nz-form
+  [nzLayout]="'inline'"
+  [formGroup]="validateForm"
+  (ngSubmit)="submitForm()"
+>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Введите логин!">
+      <nz-input-group nzPrefixIcon="user">
+        <input
+          [formControl]="validateForm.controls.userName"
+          nz-input
+          type="email"
+          placeholder="example@example.ru"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Введите пароль!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input
+          [formControl]="validateForm.controls.password"
+          nz-input
+          type="password"
+          placeholder="пароль"
+        />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <button nz-button nzType="primary" [disabled]="!validateForm.valid" class="btn">
+        Войти
+      </button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

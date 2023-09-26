@@ -1,0 +1,87 @@
+<div *ngIf="showInfo" class="container-info">
+  <div class="container-info_rating">
+    <p class="container-info_rating_label">Рейтинг</p>
+    <nz-rate
+      [ngModel]="rate"
+      [nzAllowHalf]="true"
+      [nzDisabled]="true"
+    ></nz-rate>
+  </div>
+  <div class="container-info_address">
+    <p class="container-info_address_label">Улица:&nbsp;</p>
+    <p class="container-info_address_label">{{ nameAddress }}</p>
+  </div>
+  <div class="container-info_barrier">
+    <p class="container-info_barrier_label">Безбарьерная среда</p>
+    <div *ngFor="let item of barrierFreeElements">
+      <label
+        nz-checkbox
+        [(ngModel)]="checked"
+        style="pointer-events: none"
+        class="container-info_barrier_label"
+      >{{ item }}</label
+      >
+    </div>
+  </div>
+</div>
+
+<div *ngIf="addInfo" class="container">
+  <div class="container_input">
+    <p class="container_input_label">Наименование объекта</p>
+    <input
+      [formControl]="markerForm.controls.markerName"
+      nz-input
+      placeholder="Введите название"
+      nzSize="small"
+      style="max-width: 180px"
+    />
+  </div>
+  <div class="container_rating">
+    <p class="container_rating_label">Рейтинг</p>
+    <nz-rate
+      *ngIf="addInfo"
+      [nzAllowHalf]="true"
+      [formControl]="markerForm.controls.rating"
+    ></nz-rate>
+  </div>
+  <div class="container_check" [formGroup]="markerForm">
+    <p class="container_check_label">Безбарьерная среда</p>
+    <br/>
+    <nz-checkbox-group
+      [formControl]="markerForm.controls.barrierFree"
+    ></nz-checkbox-group>
+  </div>
+  <div>
+    <button nz-button nzType="primary" [disabled]="markerForm.invalid" (click)="saveMarker()" class="container_btn">
+      Сохранить
+    </button>
+  </div>
+</div>
+
+<div *ngIf="updateInfo" class="container">
+  <div class="container_input">
+    <p class="container_input_label">Наименование объекта</p>
+    <input
+      [formControl]="markerForm.controls.markerName"
+      nz-input
+      nzSize="small"
+      style="max-width: 180px"
+      [placeholder]="name"
+    />
+  </div>
+  <div class="container_rating">
+    <p class="container_rating_label">Рейтинг</p>
+    <nz-rate
+      [ngModel]="rate"
+      [nzAllowHalf]="true"
+      [formControl]="markerForm.controls.rating"
+    ></nz-rate>
+  </div>
+  <div class="container_check" [formGroup]="markerForm">
+    <p class="container_check_label">Безбарьерная среда</p>
+    <br/>
+    <nz-checkbox-group
+      [formControl]="markerForm.controls.barrierFree"
+    ></nz-checkbox-group>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+.container {
+  &_btn {
+    margin-top: 25px;
+  }
+  &_input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    &_label {
+      color: var(--Text-color, #222);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &_rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 20px;
+
+    &_label {
+      color: var(--Text-color, #222);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &_check {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    padding-top: 20px;
+
+    &_label {
+      color: var(--Text-color, #222);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+
+.container-info {
+  &_rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &_label {
+      color: var(--Text-color, #222);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &_address {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 20px;
+
+    &_label {
+      color: var(--Text-color, #222);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  &_barrier {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    &_label {
+      color: var(--Text-color, #222);
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

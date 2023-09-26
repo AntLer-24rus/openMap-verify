@@ -1,0 +1,66 @@
+.container {
+  font-family: "Manrope", sans-serif;
+  padding: 1em;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  margin-left: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.call-to-action {
+  font-style: italic;
+  margin-top: 1em;
+  color: #007bff;
+}
+
+@media screen and (min-width: 769px) {
+  .leaflet-map {
+    padding: 2em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.125em;
+  }
+
+  ul,
+  ol {
+    margin-left: 1.5em;
+  }
+
+  li {
+    margin-bottom: 1em;
+  }
+}

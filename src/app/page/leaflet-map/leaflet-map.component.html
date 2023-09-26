@@ -1,0 +1,38 @@
+<div class="header">
+  <div class="btn">
+    <button
+      nz-button
+      nzType="primary"
+      nzValue="default"
+      nzShape="round"
+      [nzLoading]="isLoadingMapInit"
+      [nzSize]="'large'"
+      [routerLink]="['../', 'about']">
+      <span class="btn_text" nz-icon nzType="contacts" nzTheme="twotone">About</span>
+    </button>
+    <button
+      nz-button
+      nzType="primary"
+      nzValue="default"
+      nzShape="round"
+      [nzLoading]="isLoadingMapInit"
+      [nzSize]="'large'"
+      (click)="openAuthModal()">
+      <span class="btn_text" nz-icon nzType="bulb" nzTheme="twotone">Log in</span>
+    </button>
+  </div>
+</div>
+
+<div
+  class="leaflet-map-container"
+  leaflet
+  [leafletOptions]="leafletOptions"
+  (leafletMapReady)="onMapReady($event)"
+  (leafletClick)="onClickMap($event)"></div>
+
+<div class="spinner-overlay">
+  <nz-spin
+    nzSimple
+    [nzSize]="'large'"
+    [nzSpinning]="isLoadingMapInit"></nz-spin>
+</div>
